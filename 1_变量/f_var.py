@@ -1,3 +1,4 @@
+import struct
 # 整型
 var_int = 100
 print(var_int)
@@ -26,6 +27,46 @@ print(var_string.index("s"))
 print(var_string.replace("string","hello"))
 print(var_string.lower())
 print(var_string.upper())
+
+# 数据类型转换
+# chr->integer（16进制)			248
+a="f8"
+print(a,type(a))
+a = int(a,16)
+print(a,type(a))  
+
+# integer -> string
+a = 0xf8
+print(a,type(a))
+a = hex(a)
+print(a,type(a))
+a = str(a)
+print(a,type(a))
+
+# intergr -> bytes (写二进制文件)
+a = 0xf8
+print(a,type(a))
+a = struct.pack("L",a)
+print(a,type(a))
+
+# “B”   unsigned char   1Byte
+# "H"   unsigned short   2byte
+# “L”    unsigned long	  4Bytes
+# "Q"   unsigned long long 8Bytes
+
+# string -> bytes -> string
+a = "aabbccddee"
+print(a,type(a))
+a = bytes.fromhex(a)
+print(a,type(a))
+a = a.hex()
+print(a,type(a))
+
+# assic -> int
+print(ord('A'))
+
+# int -> assic
+print(chr(65))
 
 # list
 
