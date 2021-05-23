@@ -69,7 +69,27 @@ print(ord('A'))
 print(chr(65))
 
 # list
+print("list demo")
+list1 = [1,2,3]
+print(list1)
+print(list1[1])
+print(list1[1:])
+print(list1[-2])
+
+# 删除某个元素
+del list1[1]
+print(list1)
+
+# 清除
+list1.clear()
+print(list1)
+
+# 追加 
+list1.append("add1")
+print(list1)
 
 # Tuple
+
+
 
 # Dictionary
